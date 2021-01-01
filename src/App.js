@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment } from "react";
+import { Footer } from "./components/footer.component";
+import { Header } from "./components/header.component";
+import { ImagesSection } from "./components/ImageSection.component";
+import { GlobalStyle } from "./styles/GlobalStyles";
 
 function App() {
+  const FooterDesc = "Desarrollada por @JilverPacheco | ";
+  const DateYear = new Date().getFullYear();
+  const AppName = "NatureUpload";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <GlobalStyle />
+      <Header AppName={AppName} />
+      <ImagesSection />
+      <Footer DateYear={DateYear} FooterDesc={FooterDesc} />
+    </Fragment>
   );
 }
 
