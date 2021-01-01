@@ -63,7 +63,7 @@ export const Icon = styled.div`
   padding: 0px 5px;
 `;
 
-export const FooterContainer = styled.div`
+export const FooterContainer = styled.footer`
   width: 100%;
   height: 40px;
   background: #202020;
